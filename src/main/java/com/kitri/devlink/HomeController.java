@@ -40,4 +40,14 @@ public class HomeController {
 	public String home() {
 		return "home/home";
 	}
+	
+	@RequestMapping(value = "/settings", method = RequestMethod.GET)
+	public String settings() {
+		return "me/settings";
+	}
+	
+	@RequestMapping(value = "/helpcenter", method = RequestMethod.GET)
+	public String helpcenter() {
+		return "me/helpcenter";
+	}
 }
