@@ -1,4 +1,4 @@
-package com.kitri.devlink;
+package com.devlink;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -41,13 +41,7 @@ public class HomeController {
 		return "home/home";
 	}
 	
-	@RequestMapping(value = "/settings", method = RequestMethod.GET)
-	public String settings() {
-		return "me/settings";
-	}
+
 	
-	@RequestMapping(value = "/helpcenter", method = RequestMethod.GET)
-	public String helpcenter() {
-		return "me/helpcenter";
-	}
+	
 }

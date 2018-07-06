@@ -10,11 +10,30 @@
 <script type='text/javascript' src="resources/js/bootstrap.js"></script>
 <link rel="stylesheet" href="resources/css/bootstrap.css">
 <link rel="stylesheet" href="resources/css/home/home.css">
+
+<!-- include summernote css/js -->
+<link href="resources/dist/summernote.css" rel="stylesheet" type="text/css">
+<script src="resources/dist/summernote.min.js" type="text/javascript"></script>
+
+
 <script src="resources/js/home/home.js"></script>
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"
 	integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR"
 	crossorigin="anonymous"></script>
+<script>
+
+	$(document).ready(function(){
+		$('#summernote').summernote({
+			
+
+	        height: 500
+			
+		});
+
+	});
+</script>
+
 </head>
 <style>
 .hcheader{
@@ -52,6 +71,10 @@ display:none;
 	outline:0;
 	border:none;
 }
+.under{
+	text-indent:5%;
+	padding:30px;
+}
 </style>
 
 <body>
@@ -69,68 +92,47 @@ display:none;
       			<input class="form-control mr-sm-2" type="text" style="width:300px; padding:5px" placeholder="도움말 검색" >
       			<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     		</form>
-
 			</div>
 			<br><br>
-			
 		</div>
 	</div>
-	<div>
-		<br>
-		<img src="resources/img/me/help.png" style="width:50px; height:50px; margin:15px"><b style="font-size:2em">대표활동</b>
-		<table>
-			<tr>
-				<td><a href="#" style="font-size:2em; padding:10px">이메일 주소 변경</a></td><td><a href="#" style="font-size:2em;padding:10px">비밀번호 변경</a></td>
-				<td><a href="#" style="font-size:2em; padding:10px">프로필 수정</a></td><td><a href="#" style="font-size:2em;padding:10px">비밀번호 변경</a></td>
-			</tr>
-		</table>
+	<section>
+	<div style="padding:60px">
+		<h3><b>문의하기</b></h3><hr>
 		
-		<table class="table table-hover">
-  			<thead>
-    			<tr>
-	      			<th scope="col" style="padding:20px"><h3><b>로그인과 보안</b></h3></th>
-    			</tr>
-  			</thead>
-  			<tbody>
-    			<tr>
-      				<td scope="row" style="padding:20px"><h4>이메일 주소</h4>
-      				<h6>계정에 이메일 주소를 등록하거나 삭제하세요.</h6>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td style="padding:20px"><h4>전화번호</h4>
-      				<h6>로그인 문제가 생길 때에 대비해서 전화번호를 등록하세요</h6>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td style="padding:20px"><h4>비밀변호 변경</h4>
-      				<h6>보안수준이 높은 비밀번호를 만드세요.</h6>
-      			</td>
-      			<tr>
-      				<thead>
-      	 				<th scope="col" style="padding:20px"><h3><b>공개범위</b></h3></th>
-      				</thead>
-      			</tr>
-    			<tr>
-      				<td scope="row" style="padding:20px"><h4>이메일 주소 공개범위</h4>
-      				<h6>회원님의 이메일 주소를 볼 수 있는 사람을 선택하세요</h6>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td style="padding:20px"><h4>1촌 공개범위</h4>
-      				<h6>1촌 목록을 누구에게 공개할지 선택하세요.</h6>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td style="padding:20px"><h4>이름의 공개 범위</h4>
-      				<h6>1촌 목록을 누구에게 공개할지 선택하세요.</h6>
-      				</td>
-      			</tr>
-      		</tbody>
-      			</table>
+		<div class="form-group">
+  			<label class="col-form-label" for="inputDefault">제목</label>
+  			<input type="text" class="form-control"style="width:700px">
+		</div>
+		 <div class="form-group">
+      <label for="exampleInputFile">파일첨부</label>
+      <input type="file" class="form-control-file" id="exampleInputFile" style="width:700px" aria-describedby="fileHelp">
+    </div>
+		    <div class="form-group">
+      <label for="exampleTextarea">내용</label>
+      <div style="width:700px; hieght:700px">
+         <div id="summernote"></div>
+      </div>
+
+      <br>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+   		<button type="button" class="btn btn-outline-success" style="width:150px">보내기</button>
 	</div>
+	</section>
+	<aside style="float:right; padding:30px;">
+		<div>
+			<a href="#" style="padding:10px"><h4><b>문의하기</b></h4></a>
+			<a href="#" style="padding:10px"><h4><b>나의 문의함</b></h4></a>
+		</div>
+	</aside>
 
 </div>
+
 <%@include file="../home/devfoot.jsp"%>
 </body>
 </html>
